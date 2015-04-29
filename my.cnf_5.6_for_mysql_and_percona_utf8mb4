@@ -21,7 +21,7 @@ myisam_sort_buffer_size = 8M
 
 query_cache_size = 32M
 
-collation_server = utf8mb4_general_ci
+collation_server = utf8mb4_unicode_ci
 character-set-server = utf8mb4
 character-set-client-handshake = FALSE
 tmpdir = /var/tmp
@@ -31,11 +31,12 @@ slow_query_log_file = slowquery.log
 long_query_time = 1
 
 transaction_isolation = READ-COMMITTED
+binlog_format=mixed
 
 log-bin=mysql-bin
 relay-log=relay-bin
 
-server-id	= 102 
+server-id	= 16 
 
 innodb_file_per_table=1
 
@@ -49,7 +50,5 @@ innodb_flush_log_at_trx_commit = 2
 innodb_lock_wait_timeout = 40
 innodb_flush_method=O_DIRECT
 
-
 [mysql]
 default-character-set = utf8mb4
-
